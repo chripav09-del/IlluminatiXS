@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.md
+_build/
+_prove/
+assets/
