@@ -116,7 +116,7 @@ body.menu-open{overflow:hidden}
 .voices .score{display:flex;align-items:center;gap:12px;font-weight:500}
 
 /* ---------- vieni in salone ---------- */
-.visit .sign{width:100%;height:auto;margin-bottom:var(--s6);border-radius:2px}
+.visit .sign{width:100%;height:auto;margin-bottom:var(--s6);border-radius:2px;box-shadow:0 30px 60px -36px hsl(30 8% 7% / .55)}
 .visit .grid{display:grid;gap:var(--s4)}
 @media (min-width:900px){ .visit .grid{grid-template-columns:1.2fr 1fr;gap:var(--s10);align-items:start} }
 .status{display:inline-flex;align-items:center;gap:10px;font-weight:500;min-height:32px}
