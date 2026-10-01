@@ -69,6 +69,24 @@ if (menuBtn && menu) {
   });
 }
 
+/* ---------- il nome sempre intero: si adatta alla larghezza ---------- */
+function fitText(el, ratio) {
+  const box = el.parentElement;
+  const cs = getComputedStyle(box);
+  const avail = (box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)) * ratio;
+  el.style.fontSize = '100px';
+  const w = el.scrollWidth || el.getBoundingClientRect().width;
+  el.style.fontSize = Math.max(28, Math.floor(100 * avail / w)) + 'px';
+}
+const fits = () => {
+  document.querySelectorAll('.mast').forEach((m) => fitText(m, innerWidth >= 900 ? 0.8 : 1));
+  document.querySelectorAll('.foot .big').forEach((m) => fitText(m, 1));
+  document.querySelectorAll('.insegna__t').forEach((m) => fitText(m, 0.74));
+};
+fits();
+(document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(fits);
+addEventListener('resize', fits);
+
 /* ---------- copertina: insegna che si monta + luce + 3D ---------- */
 const mast = document.querySelector('.mast');
 if (mast) {
