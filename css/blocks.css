@@ -116,7 +116,7 @@ body.menu-open{overflow:hidden}
 .voices .score{display:flex;align-items:center;gap:12px;font-weight:500}
 
 /* ---------- vieni in salone ---------- */
-.visit .sign{width:100%;aspect-ratio:4/1;object-fit:cover;margin-bottom:var(--s6)}
+.visit .sign{width:100%;height:auto;margin-bottom:var(--s6);border-radius:2px}
 .visit .grid{display:grid;gap:var(--s4)}
 @media (min-width:900px){ .visit .grid{grid-template-columns:1.2fr 1fr;gap:var(--s10);align-items:start} }
 .status{display:inline-flex;align-items:center;gap:10px;font-weight:500;min-height:32px}
@@ -255,3 +255,8 @@ body.menu-open .bar{display:none}
   .cover__photo .tilt,.coverflow .card{transform:none!important}
 }
 @media (min-width:900px){ .cover__body{max-width:none;padding-inline:max(var(--gutter),calc((100vw - var(--max)) / 2 + var(--gutter)))} }
+
+.review-cta{display:grid;gap:18px;align-items:center;margin-top:var(--s6);padding-top:var(--s4);border-top:1px solid hsl(40 25% 94% / .2)}
+.big5{font:700 clamp(5rem,26vw,9rem)/.8 var(--font-display);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px var(--gold);background:linear-gradient(100deg,transparent 40%,hsl(42 100% 80% / .9) 50%,transparent 60%) 120% 0/250% 100% no-repeat;-webkit-background-clip:text;background-clip:text;animation:shine 4s var(--ease) infinite 1s}
+@keyframes shine{0%{background-position:120% 0}60%,100%{background-position:-60% 0}}
+@media (min-width:900px){ .review-cta{grid-template-columns:auto 1fr;gap:var(--s6)} }

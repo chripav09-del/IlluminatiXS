@@ -71,6 +71,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 @media (hover:hover){ .btn:hover{box-shadow:0 14px 30px -14px hsl(30 8% 7% / .6)} .btn:hover::after{transform:skewX(-18deg) translateX(520%)} }
 .btn:active{transform:translateY(1px) scale(.99)}
 .btn--light{background:var(--paper);color:var(--ink)}
+.btn--gold{background:var(--gold);color:var(--ink)}
+.btn--gold .stars,.dark .btn--gold .stars{color:var(--ink)}
 .btn--line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
 @media (hover:hover){ .btn--line:hover{background:hsl(30 8% 7% / .06)} .dark .btn--line:hover{background:hsl(40 25% 94% / .08)} }
 
@@ -87,7 +89,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .sec{padding-block:var(--s10)}
 .sec--lg{padding-block:var(--s16)}
 @media (max-width:899px){ .sec--lg{padding-block:var(--s10)} }
-.dark{background:var(--wall);color:var(--on-dark)}
+.dark{background:radial-gradient(120% 80% at 0% 0%,hsl(36 30% 14%),transparent 60%),var(--ink);color:var(--on-dark)}
 .dark :focus-visible{outline-color:var(--gold)}
 
 /* ingressi */
